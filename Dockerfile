@@ -16,6 +16,7 @@ RUN git clone git://github.com/paxed/dgamelaunch.git && \
     configure.ac && \
   sed -i \
     -e "/^maxnicklen/s/=.*/= 20/" \
+    -e 's,nethack.alt.org\ -\ http://nethack.alt.org,staffordwilliams.com - http://staffordwilliams.com/nethack,g' \
     -e "/game_\(path\|args\)/s/nethack/nethack.343-nao/" \
     -e "/^commands\[\(register\|login\)\]/s/=\(.*\)/= mkdir \"%ruserdata\/%N\",\n\1/" \
     -e "s:/%n:/%N/%n:" \
